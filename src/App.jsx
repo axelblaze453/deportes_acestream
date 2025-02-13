@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Card } from "./components/ui/Card";
-import { Play } from "lucide-react";
+import { FaPlay } from "react-icons/fa";
 import ReactPlayer from "react-player";
 
 const channels = [
@@ -20,7 +20,7 @@ export default function SportsStreamingApp() {
         {channels.map((channel) => (
           <Card key={channel.name} className="p-3 cursor-pointer hover:bg-gray-700 flex items-center gap-3"
             onClick={() => setSelectedChannel(channel)}>
-            <Play className="w-6 h-6 text-green-400" /> {channel.name}
+            <FaPlay className="w-6 h-6 text-green-400" /> {channel.name}
           </Card>
         ))}
       </aside>
